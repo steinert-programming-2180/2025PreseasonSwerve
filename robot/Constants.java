@@ -19,14 +19,14 @@ import edu.wpi.first.math.util.Units;
 public final class Constants {
   public static class OperatorConstants {
     public static final int driveControllerPort = 0;
-    public static final double Deadband=0;
+    public static final double Deadband=0.1;
   }
 
   public static final class DriveConstants{
     //max speed in meters per second
     //max angular speed in radians per second
-    public static final double maxSpeed=5.0;
-    public static final double maxAngularSpeed=2*Math.PI;
+    public static final double maxSpeed=8.0;
+    public static final double maxAngularSpeed=4*Math.PI;
 
 
     //imma be honest idk what the units on this are, imma guess meters per second squared and radians per second squared
@@ -45,34 +45,34 @@ public final class Constants {
     );
 
     //these are long. Contain everything needed to define each swerve module
-    public static final int FLDrivePort=0;
-    public static final int FLTurnPort=0;
-    public static final int FLAbsEncoderPort=0;
-    public static final double FLAbsEncoderOffset=0;
+    public static final int FLDrivePort=5;
+    public static final int FLTurnPort=6;
+    public static final int FLAbsEncoderPort=6;
+    public static final double FLAbsEncoderOffset=0; //0.263
     public static final boolean FLDriveReversed=false;
     public static final boolean FLTurnReversed=false;
     public static final boolean FLAbsEncoderReversed=false;
 
-    public static final int FRDrivePort=0;
-    public static final int FRTurnPort=0;
-    public static final int FRAbsEncoderPort=0;
-    public static final double FRAbsEncoderOffset=0;
+    public static final int FRDrivePort=1;
+    public static final int FRTurnPort=2;
+    public static final int FRAbsEncoderPort=2;
+    public static final double FRAbsEncoderOffset=0; //0.443
     public static final boolean FRDriveReversed=false;
     public static final boolean FRTurnReversed=false;
     public static final boolean FRAbsEncoderReversed=false;
 
-    public static final int BLDrivePort=0;
-    public static final int BLTurnPort=0;
-    public static final int BLAbsEncoderPort=0;
-    public static final double BLAbsEncoderOffset=0;
+    public static final int BLDrivePort=7;
+    public static final int BLTurnPort=8;
+    public static final int BLAbsEncoderPort=8;
+    public static final double BLAbsEncoderOffset=0; //0.293
     public static final boolean BLDriveReversed=false;
     public static final boolean BLTurnReversed=false;
     public static final boolean BLAbsEncoderReversed=false;
 
-    public static final int BRDrivePort=0;
-    public static final int BRTurnPort=0;
-    public static final int BRAbsEncoderPort=0;
-    public static final double BRAbsEncoderOffset=0;
+    public static final int BRDrivePort=3;
+    public static final int BRTurnPort=4;
+    public static final int BRAbsEncoderPort=4;
+    public static final double BRAbsEncoderOffset=0; //0.986
     public static final boolean BRDriveReversed=false;
     public static final boolean BRTurnReversed=false;
     public static final boolean BRAbsEncoderReversed=false;
@@ -80,9 +80,9 @@ public final class Constants {
   }
 
   public static final class ModuleConstants{
-    public static final double wheelDiameterM=Units.inchesToMeters(0);
-    public static final double driveMotorGearRatio = 1 / 2;
-    public static final double turnMotorGearRatio = 1 / 2;
+    public static final double wheelDiameterM=Units.inchesToMeters(4);
+    public static final double driveMotorGearRatio = 5.9/1;
+    public static final double turnMotorGearRatio = 5.9/1;
 
     //drive encoder value converts from rotations and RPM to meters and meters per second
     //turn encoder value converts from rotations and ROM to radians and radians per second
